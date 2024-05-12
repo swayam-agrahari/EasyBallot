@@ -8,10 +8,10 @@
 
 <!-- Font Icon -->
 <link rel="stylesheet"
-	href="fonts/material-icon/css/material-design-iconic-font.min.css">
+	href="../fonts/material-icon/css/material-design-iconic-font.min.css">
 
 <!-- Main css -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 	<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
@@ -65,9 +65,9 @@
 					</div>
 					<div class="signup-image">
 						<figure>
-							<img src="images/signup-image.jpg" alt="sing up image">
+							<img src="../images/signup-image.jpg" alt="sing up image">
 						</figure>
-						<a href="login.jsp" class="signup-image-link">I am already
+						<a href="registration/login.jsp" class="signup-image-link">I am already
 							member</a>
 					</div>
 				</div>
@@ -80,14 +80,14 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="alert/dist/sweetalert.css">
+
 	<script>
 	var status = document.getElementById("status").value;
  	console.log(status);
 	if(status == "success"){
 		swal("Congrats","Account created successfully","success")
 		setTimeout(function() {
-            window.location.href = "login.jsp"; // Redirect to the login page after a delay
+            window.location.href = "login.jsp"; 
         }, 2000);
 	} 
 	
