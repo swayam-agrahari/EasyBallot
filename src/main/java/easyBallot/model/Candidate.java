@@ -4,8 +4,9 @@ public class Candidate {
 	
 	protected int id;
 	protected String name,party;
-	protected boolean approved;
-	protected boolean rejected;
+	protected boolean approved,rejected;
+	protected int voteCount;
+	
 	
 	
 	public Candidate( ) {
@@ -23,6 +24,12 @@ public class Candidate {
 		this.id = id;
 		this.approved = approved;
 		this.rejected = rejected;
+	}
+	public Candidate (int id,String name,int voteCount) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.voteCount= voteCount;
 	}
 	
 	public Candidate(int id, String name, String party, boolean approved,boolean rejected) {
@@ -65,6 +72,13 @@ public class Candidate {
 	}
 	public void setRejected(boolean rejected) {
 		this.rejected = rejected;
+	}
+	public int getVoteCount() {
+	    return voteCount;
+	}
+
+	public void setVoteCount(int voteCount) {
+		this.voteCount = voteCount;
 	}
 
 	

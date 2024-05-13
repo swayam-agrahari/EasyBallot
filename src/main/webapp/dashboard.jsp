@@ -1,10 +1,9 @@
-
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 
 <%
-if(session.getAttribute("name") == null){
+if (session.getAttribute("name") == null) {
 	response.sendRedirect("login.jsp");
 }
-
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,23 +45,43 @@ if(session.getAttribute("name") == null){
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded"  href="${pageContext.request.contextPath}/candidate">Candidates</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded"
+						href="${pageContext.request.contextPath}/candidate">Candidates</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Logout</a></li>
-					
+
 				</ul>
 			</div>
 		</div>
 	</nav>
- 
 
-	
+<div style="justify-content: center;margin: 400px">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Vote Count</th>
+		
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="candidate" items="${listCandidate}">
+				<tr>
+					<td><c:out value="${candidate.id}" /></td>
+					<td><c:out value="${candidate.name}" /></td>
+					<td><c:out value="${candidate.voteCount}" /></td>
+					
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+</div>
 
- 
 </body>
 </html>
 

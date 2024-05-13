@@ -46,22 +46,22 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Dashboard</display-name>
-    <servlet-name>Dashboard</servlet-name>
-    <servlet-class>easyBallot.admin.Dashboard</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Dashboard</servlet-name>
-    <url-pattern>/Dashboard</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>CandidateServlet</display-name>
     <servlet-name>CandidateServlet</servlet-name>
     <servlet-class>easyBallot.web.CandidateServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CandidateServlet</servlet-name>
-    <url-pattern>/CandidateServlet</url-pattern>
+    <url-pattern>/Dashboard</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VoterServlet</display-name>
+    <servlet-name>VoterServlet</servlet-name>
+    <servlet-class>easyBallot.web.VoterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VoterServlet</servlet-name>
+    <url-pattern>/VoterServlet</url-pattern>
   </servlet-mapping>
 </web-app>

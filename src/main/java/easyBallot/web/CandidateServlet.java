@@ -39,6 +39,10 @@ public class CandidateServlet extends HttpServlet {
 		try {
 
 			switch (action) {
+			case "/dashboard":{
+				listCandidates(request,response);
+				break;
+					}
 			case "/candidate": {
 				listUser(request, response);
 				break;
@@ -96,6 +100,15 @@ public class CandidateServlet extends HttpServlet {
 		List<Candidate> listUser = candidateDAO.selectAllUsers();
 		request.setAttribute("listUser", listUser);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("candidate.jsp");
+		dispatcher.forward(request, response);
+
+	}
+	
+	private void listCandidates(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException {
+		List<Candidate> listCandidate= candidateDAO.countVotes();
+		request.setAttribute("listCandidate", listCandidate);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("dashboard.jsp");
 		dispatcher.forward(request, response);
 
 	}

@@ -36,7 +36,7 @@ public class Login extends HttpServlet {
 			if(rs.next()) {
 				if ((rs.getString("uemail").equals("admin@gmail.com"))  && (rs.getString("upwd").equals("admin"))  ) {
 					session.setAttribute("name", "admin");
-					response.sendRedirect("dashboard.jsp");
+					response.sendRedirect("dashboard");
 				}
 				else {	
 					session.setAttribute("name",rs.getString("uname"));

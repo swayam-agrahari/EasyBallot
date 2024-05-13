@@ -17,7 +17,7 @@
 		<nav class="navbar navbar-expand-md navbar-dark"
 			style="background-color: #2C3E50;">
 			<div class="text-center">
-				<a class="text-center" href="dashboard.jsp"
+				<a class="text-center" href="dashboard"
 					style="text-decoration: none; color: white; font-size: xx-large; text-align: center;align-items: center;">Online
 					Voting System</a>
 
